@@ -17,7 +17,7 @@ const navItems = [
   { name: 'Contact', link: '/contact' },
 ];
 
-const Logo = ({ height = 36 }: { height?: number }) => (
+const Logo = ({ height = 46 }: { height?: number }) => (
   <Link href="/" aria-label="Sainte ML Clinique — Accueil">
     <img
       src="/logo.png"
@@ -51,7 +51,7 @@ function FloatingPill() {
           'shadow-[0_8px_32px_rgba(0,87,183,0.12),0_2px_8px_rgba(0,0,0,0.06)]',
         )}
       >
-        <Logo height={32} />
+        <Logo height={40} />
 
         {/* Desktop nav links */}
         <nav className="hidden md:flex items-center gap-0.5" aria-label="Navigation principale">
@@ -150,7 +150,7 @@ function FullHeader({ visible }: { visible: boolean }) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
-          <Logo height={36} />
+          <Logo height={46} />
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-0.5" aria-label="Navigation principale">

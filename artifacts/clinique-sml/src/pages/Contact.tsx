@@ -23,7 +23,7 @@ const infos = [
   {
     icon: Clock,
     title: 'Horaires',
-    lines: ['Lun – Ven : 7h00 – 19h00', 'Samedi : 8h00 – 14h00', 'Urgences : 24h/24'],
+    lines: ['Lun – Dim : 8h00 – 18h00', 'Urgences : 24h/24'],
   },
 ];
 

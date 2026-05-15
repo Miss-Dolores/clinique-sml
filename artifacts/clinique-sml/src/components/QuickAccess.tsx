@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   CalendarCheck, Clock, MessageSquareWarning, Star,
-  ShieldCheck, Phone, ChevronRight, X, MessageCircle,
+  ShieldCheck, Phone, ChevronRight, X,
 } from 'lucide-react';
 
 const WHATSAPP = '2290144913373';
@@ -172,22 +172,6 @@ export default function QuickAccess() {
         </AnimatePresence>
       </div>
 
-      {/* WhatsApp floating button — bottom right */}
-      <a
-        href={`https://wa.me/${WHATSAPP}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Nous contacter sur WhatsApp"
-        className="
-          fixed bottom-6 right-6 z-50
-          w-14 h-14 rounded-full shadow-lg
-          flex items-center justify-center
-          transition-transform hover:scale-110
-        "
-        style={{ backgroundColor: '#25D366' }}
-      >
-        <MessageCircle className="w-7 h-7 text-white fill-white" />
-      </a>
     </>
   );
 }
