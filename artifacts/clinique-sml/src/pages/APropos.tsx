@@ -2,19 +2,19 @@ import { motion } from 'framer-motion';
 import { Heart, Award, Lightbulb, Users, Target, Handshake } from 'lucide-react';
 
 const values = [
-  { icon: Award, title: 'Excellence', desc: 'Nous visons l\'excellence dans chaque acte médical, avec des protocoles rigoureux et une formation continue de nos équipes.' },
-  { icon: Heart, title: 'Humanité', desc: 'Chaque patient est unique. Nous l\'écoutons, le respectons et adaptons nos soins à sa situation personnelle.' },
-  { icon: Lightbulb, title: 'Innovation', desc: 'Nous investissons en permanence dans les technologies médicales les plus récentes pour offrir les meilleurs traitements possibles.' },
+  { icon: Award, title: 'Excellence', desc: "Nous visons l'excellence dans chaque acte médical, avec des protocoles rigoureux et une formation continue de nos équipes." },
+  { icon: Heart, title: 'Humanité', desc: "Chaque patient est unique. Nous l'écoutons, le respectons et adaptons nos soins à sa situation personnelle." },
+  { icon: Lightbulb, title: 'Innovation', desc: 'Nous investissons dans les technologies médicales les plus récentes pour offrir des diagnostics précis et des traitements efficaces.' },
   { icon: Users, title: 'Équipe', desc: 'Nos professionnels travaillent en synergie pour assurer une prise en charge globale et coordonnée de chaque patient.' },
   { icon: Target, title: 'Précision', desc: 'Des diagnostics précis grâce à des équipements de pointe et une expertise médicale de haut niveau.' },
   { icon: Handshake, title: 'Confiance', desc: 'Bâtir une relation de confiance durable avec nos patients et leur famille est au cœur de notre mission.' },
 ];
 
 const stats = [
-  { value: '2009', label: 'Année de fondation' },
+  { value: '2025', label: 'Ouverture de la clinique' },
   { value: '20+', label: 'Médecins spécialistes' },
-  { value: '10 000+', label: 'Patients traités' },
   { value: '6', label: 'Spécialités médicales' },
+  { value: '24h/7j', label: 'Service des urgences' },
 ];
 
 export default function APropos() {
@@ -35,7 +35,7 @@ export default function APropos() {
               À propos de la Clinique SML
             </h1>
             <p className="font-['Poppins'] text-[#3D3D3D] text-lg leading-relaxed">
-              Fondée en 2009, la Clinique SML est devenue un établissement de référence en matière de soins médicaux au Mali, alliant expertise, modernité et bienveillance.
+              Nouvellement ouverte à Agla-Akplomey, Cotonou, la Clinique SML allie expertise médicale, équipements modernes et bienveillance pour accompagner chaque patient.
             </p>
           </motion.div>
         </div>
@@ -51,20 +51,20 @@ export default function APropos() {
               viewport={{ once: true }}
             >
               <span className="inline-block px-3 py-1 bg-[#C8E6FA] text-[#003E8A] text-xs font-semibold rounded-full font-['Poppins'] uppercase tracking-wide mb-4">
-                Notre histoire
+                Notre projet
               </span>
               <h2 className="font-['Space_Grotesk'] font-bold text-3xl text-[#0A0A0A] mb-5">
-                15 ans au service de votre santé
+                Un projet né d'une vision commune
               </h2>
               <div className="space-y-4 font-['Poppins'] text-[#3D3D3D] text-sm leading-relaxed">
                 <p>
-                  La Clinique SML a été fondée en 2009 par un groupe de médecins visionnaires désireux d'offrir des soins médicaux de qualité accessible à toute la population. Dès ses débuts, l'établissement s'est distingué par son approche humaine et son engagement sans faille envers l'excellence médicale.
+                  La Clinique SML est née de la volonté d'un groupe de médecins expérimentés de doter le quartier d'Agla-Akplomey d'un établissement de santé moderne et accessible. Face au besoin croissant de soins spécialisés de proximité à Cotonou, nous avons réuni les meilleures compétences médicales pour ouvrir cette clinique.
                 </p>
                 <p>
-                  Au fil des années, nous avons développé notre capacité d'accueil, enrichi notre plateau technique et recruté les meilleurs spécialistes. Aujourd'hui, la Clinique SML dispose de plus de 20 médecins couvrant 6 spécialités médicales et accueille chaque année des milliers de patients.
+                  Chacun de nos praticiens apporte avec lui des années d'expérience acquises dans les meilleurs hôpitaux du Bénin et à l'international. Cette richesse collective est mise au service de nos patients dès le premier jour.
                 </p>
                 <p>
-                  Notre mission reste inchangée : offrir à chaque patient des soins de qualité dans un environnement chaleureux, respectueux et propice à la guérison.
+                  Notre ambition : devenir la référence en matière de soins médicaux dans la région, en offrant un accueil chaleureux, des diagnostics précis et des traitements adaptés à chaque situation.
                 </p>
               </div>
             </motion.div>
@@ -76,12 +76,12 @@ export default function APropos() {
             >
               <img
                 src="https://picsum.photos/seed/clinic2/600/450"
-                alt="La Clinique SML"
+                alt="La Clinique SML à Agla-Akplomey"
                 className="rounded-2xl shadow-xl border-4 border-[#C8E6FA] w-full object-cover"
               />
               <div className="absolute -bottom-4 -right-4 bg-[#0057B7] text-white rounded-2xl p-5 shadow-xl">
-                <p className="font-['Space_Grotesk'] font-bold text-3xl">15</p>
-                <p className="font-['Poppins'] text-xs text-white/80">ans d'excellence</p>
+                <p className="font-['Space_Grotesk'] font-bold text-3xl">Nouveau</p>
+                <p className="font-['Poppins'] text-xs text-white/80">Ouverture 2025</p>
               </div>
             </motion.div>
           </div>
@@ -89,7 +89,7 @@ export default function APropos() {
       </section>
 
       {/* Stats */}
-      <section className="py-14 bg-[#EBF5FD]">
+      <section className="py-12 bg-[#EBF5FD]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map(({ value, label }, i) => (
@@ -101,7 +101,7 @@ export default function APropos() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center bg-white rounded-2xl p-6 border border-[#C8E6FA] shadow-sm"
               >
-                <p className="font-['Space_Grotesk'] font-bold text-4xl text-[#0057B7] mb-1">{value}</p>
+                <p className="font-['Space_Grotesk'] font-bold text-3xl text-[#0057B7] mb-1">{value}</p>
                 <p className="font-['Poppins'] text-sm text-[#3D3D3D]">{label}</p>
               </motion.div>
             ))}
@@ -109,7 +109,7 @@ export default function APropos() {
         </div>
       </section>
 
-      {/* Mission & Valeurs */}
+      {/* Valeurs */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">

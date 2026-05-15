@@ -61,11 +61,11 @@ export default function RendezVous() {
                 <h3 className="font-['Space_Grotesk'] font-semibold text-lg mb-2">Préférez-vous appeler ?</h3>
                 <p className="font-['Poppins'] text-white/80 text-sm mb-4">Notre secrétariat est disponible du lundi au samedi de 7h à 19h.</p>
                 <a
-                  href="tel:+22300000000"
-                  className="inline-block px-5 py-2.5 bg-white text-[#0057B7] font-semibold rounded-xl hover:bg-[#EBF5FD] transition-colors font-['Poppins'] text-sm"
+                  href="tel:+22901000000"
+                  className="inline-block px-5 py-2 bg-white text-[#0057B7] font-semibold rounded-xl hover:bg-[#EBF5FD] transition-colors font-['Poppins'] text-sm"
                   aria-label="Appeler la clinique"
                 >
-                  +223 00 00 00 00
+                  +229 01 00 00 00
                 </a>
               </div>
 
@@ -74,7 +74,7 @@ export default function RendezVous() {
                 <p className="font-['Poppins'] text-sm text-[#3D3D3D]">
                   <span className="font-semibold text-[#0057B7]">⚠ Urgence médicale ?</span>{' '}
                   Ne remplissez pas ce formulaire. Appelez immédiatement le{' '}
-                  <a href="tel:+22300000000" className="text-[#0057B7] font-semibold hover:underline">+223 00 00 00 00</a> ou rendez-vous directement à notre service des urgences.
+                  <a href="tel:+22901000000" className="text-[#0057B7] font-semibold hover:underline">+229 01 00 00 00</a> ou rendez-vous directement à notre service des urgences à Agla-Akplomey.
                 </p>
               </div>
             </div>

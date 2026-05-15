@@ -1,10 +1,10 @@
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Clock, Award } from 'lucide-react';
+import { ArrowRight, Shield, Clock, MapPin } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-white min-h-[90vh] flex items-center">
+    <section className="relative overflow-hidden bg-white min-h-[88vh] flex items-center">
       {/* Decorative background shape */}
       <div className="absolute right-0 top-0 w-1/2 h-full pointer-events-none" aria-hidden="true">
         <svg viewBox="0 0 600 700" className="w-full h-full" preserveAspectRatio="xMaxYMid slice">
@@ -28,22 +28,25 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
-          <span className="inline-block px-3 py-1 bg-[#C8E6FA] text-[#003E8A] text-xs font-semibold rounded-full font-['Poppins'] tracking-wide uppercase mb-6">
-            Clinique médicale de référence
-          </span>
-          <h1 className="font-['Space_Grotesk'] font-bold text-4xl sm:text-5xl lg:text-6xl text-[#0A0A0A] leading-tight mb-6">
+          <div className="flex items-center gap-2 mb-5">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#C8E6FA] text-[#003E8A] text-xs font-semibold rounded-full font-['Poppins'] tracking-wide uppercase">
+              <MapPin className="w-3 h-3" />
+              Agla-Akplomey, Cotonou — Bénin
+            </span>
+          </div>
+          <h1 className="font-['Space_Grotesk'] font-bold text-4xl sm:text-5xl lg:text-6xl text-[#0A0A0A] leading-tight mb-5">
             Votre santé entre{' '}
             <span className="text-[#0057B7]">de bonnes mains</span>
           </h1>
-          <p className="font-['Poppins'] text-lg text-[#3D3D3D] leading-relaxed mb-8 max-w-xl">
-            La Clinique SML vous accompagne avec expertise et bienveillance à chaque étape de votre parcours de soins. Une équipe de professionnels dévoués à votre service.
+          <p className="font-['Poppins'] text-lg text-[#3D3D3D] leading-relaxed mb-7 max-w-xl">
+            La Clinique SML vient d'ouvrir ses portes à Agla-Akplomey. Une équipe de médecins expérimentés vous accompagne avec expertise et bienveillance pour tous vos besoins de santé.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-3">
             <Link href="/rendez-vous">
               <motion.span
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center justify-center gap-2 px-6 py-3.5 bg-[#0057B7] text-white font-medium rounded-xl cursor-pointer hover:bg-[#003E8A] transition-colors font-['Poppins'] text-sm shadow-lg shadow-[#0057B7]/25"
+                className="flex items-center justify-center gap-2 px-5 py-2.5 bg-[#0057B7] text-white font-medium rounded-xl cursor-pointer hover:bg-[#003E8A] transition-colors font-['Poppins'] text-sm shadow-lg shadow-[#0057B7]/25"
               >
                 Prendre rendez-vous
                 <ArrowRight className="w-4 h-4" />
@@ -53,7 +56,7 @@ export default function HeroSection() {
               <motion.span
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center justify-center gap-2 px-6 py-3.5 border-2 border-[#0057B7] text-[#0057B7] font-medium rounded-xl cursor-pointer hover:bg-[#C8E6FA] transition-colors font-['Poppins'] text-sm"
+                className="flex items-center justify-center gap-2 px-5 py-2.5 border-2 border-[#0057B7] text-[#0057B7] font-medium rounded-xl cursor-pointer hover:bg-[#C8E6FA] transition-colors font-['Poppins'] text-sm"
               >
                 Nos services
               </motion.span>
@@ -61,11 +64,11 @@ export default function HeroSection() {
           </div>
 
           {/* Trust badges */}
-          <div className="flex flex-wrap gap-5 mt-10">
+          <div className="flex flex-wrap gap-5 mt-9">
             {[
               { icon: Shield, label: 'Soins certifiés' },
               { icon: Clock, label: 'Urgences 24h/24' },
-              { icon: Award, label: '15 ans d\'expertise' },
+              { icon: MapPin, label: 'Agla-Akplomey, Bénin' },
             ].map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full bg-[#EBF5FD] flex items-center justify-center">
@@ -92,15 +95,14 @@ export default function HeroSection() {
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Floating stat card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               className="absolute -bottom-5 -left-10 bg-white rounded-2xl shadow-xl p-4 border border-[#C8E6FA]"
             >
-              <p className="font-['Space_Grotesk'] font-bold text-2xl text-[#0057B7]">10 000+</p>
-              <p className="font-['Poppins'] text-xs text-[#3D3D3D] mt-0.5">Patients accompagnés</p>
+              <p className="font-['Space_Grotesk'] font-bold text-2xl text-[#0057B7]">20+</p>
+              <p className="font-['Poppins'] text-xs text-[#3D3D3D] mt-0.5">Médecins spécialistes</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -108,8 +110,8 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.7 }}
               className="absolute -top-5 -right-8 bg-white rounded-2xl shadow-xl p-4 border border-[#C8E6FA]"
             >
-              <p className="font-['Space_Grotesk'] font-bold text-2xl text-[#0057B7]">20+</p>
-              <p className="font-['Poppins'] text-xs text-[#3D3D3D] mt-0.5">Médecins experts</p>
+              <p className="font-['Space_Grotesk'] font-bold text-2xl text-[#0057B7]">6</p>
+              <p className="font-['Poppins'] text-xs text-[#3D3D3D] mt-0.5">Spécialités médicales</p>
             </motion.div>
           </div>
         </motion.div>

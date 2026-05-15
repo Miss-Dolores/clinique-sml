@@ -13,7 +13,7 @@ export default function Footer() {
               <span className="font-['Space_Grotesk'] font-bold text-xl text-white ml-1">SML</span>
             </div>
             <p className="text-white/70 text-sm font-['Poppins'] leading-relaxed">
-              Votre santé entre de bonnes mains. Nous vous accompagnons avec expertise et bienveillance depuis 2009.
+              Votre santé entre de bonnes mains. Nouvellement ouverte à Agla-Akplomey, Cotonou — votre clinique de quartier, au niveau d'une structure internationale.
             </p>
           </div>
 
@@ -58,18 +58,18 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#5BABF0] mt-0.5 shrink-0" />
-                <span className="text-white/70 text-sm font-['Poppins']">123 Avenue de la Santé, Bamako, Mali</span>
+                <span className="text-white/70 text-sm font-['Poppins']">Quartier Agla-Akplomey, Cotonou, Bénin</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#5BABF0] shrink-0" />
-                <a href="tel:+22300000000" className="text-white/70 hover:text-white text-sm font-['Poppins'] transition-colors">
-                  +223 00 00 00 00
+                <a href="tel:+22901000000" className="text-white/70 hover:text-white text-sm font-['Poppins'] transition-colors">
+                  +229 01 00 00 00
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#5BABF0] shrink-0" />
-                <a href="mailto:contact@cliniquesml.com" className="text-white/70 hover:text-white text-sm font-['Poppins'] transition-colors">
-                  contact@cliniquesml.com
+                <a href="mailto:contact@cliniquesml.bj" className="text-white/70 hover:text-white text-sm font-['Poppins'] transition-colors">
+                  contact@cliniquesml.bj
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
@@ -82,10 +82,10 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/50 text-sm font-['Poppins']">
-            © {new Date().getFullYear()} Clinique SML. Tous droits réservés.
+            © {new Date().getFullYear()} Clinique SML — Agla-Akplomey, Cotonou, Bénin. Tous droits réservés.
           </p>
           <p className="text-white/50 text-sm font-['Poppins']">
-            Fondée en 2009 — Excellence médicale au service de tous
+            Excellence médicale au service de tous
           </p>
         </div>
       </div>

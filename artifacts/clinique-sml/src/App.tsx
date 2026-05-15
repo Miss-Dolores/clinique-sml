@@ -16,6 +16,8 @@ function Router() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
+      {/* Spacer for fixed navbar */}
+      <div className="h-14" aria-hidden="true" />
       <main className="flex-1">
         <Switch>
           <Route path="/" component={Home} />
@@ -29,7 +31,7 @@ function Router() {
               <div className="text-center">
                 <h1 className="font-['Space_Grotesk'] font-bold text-5xl text-[#0057B7] mb-3">404</h1>
                 <p className="font-['Poppins'] text-[#3D3D3D] mb-6">Cette page n'existe pas.</p>
-                <a href="/" className="px-5 py-2.5 bg-[#0057B7] text-white text-sm font-medium rounded-xl hover:bg-[#003E8A] transition-colors font-['Poppins']">
+                <a href="/" className="px-4 py-2 bg-[#0057B7] text-white text-sm font-medium rounded-xl hover:bg-[#003E8A] transition-colors font-['Poppins']">
                   Retour à l'accueil
                 </a>
               </div>

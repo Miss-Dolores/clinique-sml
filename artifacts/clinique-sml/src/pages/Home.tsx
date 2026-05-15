@@ -1,6 +1,6 @@
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
-import { Star, Users, Clock, Award, Stethoscope, ArrowRight, ShieldCheck, HeartHandshake, Microscope } from 'lucide-react';
+import { Star, Users, Clock, Stethoscope, ArrowRight, ShieldCheck, HeartHandshake, Microscope } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ServiceCard from '../components/ServiceCard';
 import { services } from '../data/services';
@@ -8,9 +8,9 @@ import { testimonials } from '../data/testimonials';
 
 const stats = [
   { value: '20+', label: 'Médecins spécialistes', icon: Users },
-  { value: '10 000+', label: 'Patients accompagnés', icon: Stethoscope },
-  { value: '15 ans', label: "D'expérience", icon: Award },
-  { value: '6', label: 'Spécialités médicales', icon: Clock },
+  { value: '6', label: 'Spécialités médicales', icon: Stethoscope },
+  { value: '24h/7j', label: 'Service des urgences', icon: Clock },
+  { value: '100%', label: 'Dédié à vos soins', icon: ShieldCheck },
 ];
 
 const reasons = [
@@ -22,7 +22,7 @@ const reasons = [
   {
     icon: HeartHandshake,
     title: 'Une approche humaine',
-    desc: 'Nous plaçons l\'humain au cœur de notre pratique. Chaque consultation est un moment d\'écoute, de respect et de bienveillance pour le patient.',
+    desc: "Nous plaçons l'humain au cœur de notre pratique. Chaque consultation est un moment d'écoute, de respect et de bienveillance pour le patient.",
   },
   {
     icon: Microscope,
@@ -37,7 +37,7 @@ export default function Home() {
       <HeroSection />
 
       {/* Stats */}
-      <section className="bg-[#EBF5FD] py-14" aria-label="Chiffres clés">
+      <section className="bg-[#EBF5FD] py-12" aria-label="Chiffres clés">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map(({ value, label, icon: Icon }, i) => (
@@ -81,7 +81,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-8">
             <Link href="/services">
-              <span className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#0057B7] text-[#0057B7] font-medium rounded-xl cursor-pointer hover:bg-[#C8E6FA] transition-colors font-['Poppins'] text-sm">
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-[#0057B7] text-[#0057B7] font-medium rounded-xl cursor-pointer hover:bg-[#C8E6FA] transition-colors font-['Poppins'] text-sm">
                 Voir tous nos services
                 <ArrowRight className="w-4 h-4" />
               </span>
@@ -176,15 +176,15 @@ export default function Home() {
             <h2 className="font-['Space_Grotesk'] font-bold text-3xl sm:text-4xl text-white mb-4">
               Prenez soin de votre santé dès aujourd'hui
             </h2>
-            <p className="font-['Poppins'] text-white/80 text-base mb-8 max-w-xl mx-auto">
-              Notre équipe de spécialistes est prête à vous accueillir et vous accompagner. Prenez rendez-vous en quelques clics.
+            <p className="font-['Poppins'] text-white/80 text-base mb-7 max-w-xl mx-auto">
+              Notre équipe de spécialistes est prête à vous accueillir à Agla-Akplomey. Prenez rendez-vous en quelques clics.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/rendez-vous">
                 <motion.span
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-[#0057B7] font-semibold rounded-xl cursor-pointer hover:bg-[#EBF5FD] transition-colors font-['Poppins'] text-sm shadow-lg"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-[#0057B7] font-semibold rounded-xl cursor-pointer hover:bg-[#EBF5FD] transition-colors font-['Poppins'] text-sm shadow-lg"
                 >
                   Prendre rendez-vous
                   <ArrowRight className="w-4 h-4" />
@@ -193,7 +193,7 @@ export default function Home() {
               <Link href="/contact">
                 <motion.span
                   whileHover={{ scale: 1.02 }}
-                  className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-white text-white font-semibold rounded-xl cursor-pointer hover:bg-white/10 transition-colors font-['Poppins'] text-sm"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 border-2 border-white text-white font-semibold rounded-xl cursor-pointer hover:bg-white/10 transition-colors font-['Poppins'] text-sm"
                 >
                   Nous contacter
                 </motion.span>

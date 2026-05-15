@@ -3,7 +3,7 @@ import type { Doctor } from '../types';
 export const doctors: Doctor[] = [
   {
     id: '1',
-    name: 'Dr. Amadou Diallo',
+    name: 'Dr. Kofi Agossou',
     specialty: 'Médecine générale',
     imageUrl: 'https://picsum.photos/seed/doctor1/300/300',
     available: true,
@@ -11,7 +11,7 @@ export const doctors: Doctor[] = [
   },
   {
     id: '2',
-    name: 'Dr. Fatou Koné',
+    name: 'Dr. Fatoumata Dossou',
     specialty: 'Pédiatrie',
     imageUrl: 'https://picsum.photos/seed/doctor2/300/300',
     available: true,
@@ -19,7 +19,7 @@ export const doctors: Doctor[] = [
   },
   {
     id: '3',
-    name: 'Dr. Moussa Traoré',
+    name: 'Dr. Hervé Amoussou',
     specialty: 'Cardiologie',
     imageUrl: 'https://picsum.photos/seed/doctor3/300/300',
     available: false,
@@ -27,7 +27,7 @@ export const doctors: Doctor[] = [
   },
   {
     id: '4',
-    name: 'Dr. Aïcha Bamba',
+    name: 'Dr. Nadège Hounkpatin',
     specialty: 'Dermatologie',
     imageUrl: 'https://picsum.photos/seed/doctor4/300/300',
     available: true,
@@ -35,7 +35,7 @@ export const doctors: Doctor[] = [
   },
   {
     id: '5',
-    name: 'Dr. Mariam Coulibaly',
+    name: 'Dr. Carine Zinsou',
     specialty: 'Gynécologie',
     imageUrl: 'https://picsum.photos/seed/doctor5/300/300',
     available: true,
@@ -43,7 +43,7 @@ export const doctors: Doctor[] = [
   },
   {
     id: '6',
-    name: 'Dr. Seydou Ouédraogo',
+    name: 'Dr. Romuald Akpan',
     specialty: 'Urgences',
     imageUrl: 'https://picsum.photos/seed/doctor6/300/300',
     available: true,

@@ -6,17 +6,17 @@ const infos = [
   {
     icon: MapPin,
     title: 'Adresse',
-    lines: ['123 Avenue de la Santé', 'Bamako, Mali'],
+    lines: ['Quartier Agla-Akplomey', 'Cotonou, Bénin'],
   },
   {
     icon: Phone,
     title: 'Téléphone',
-    lines: ['+223 00 00 00 00', '+223 00 00 00 01'],
+    lines: ['+229 01 00 00 00', '+229 01 00 00 01'],
   },
   {
     icon: Mail,
     title: 'Email',
-    lines: ['contact@cliniquesml.com', 'urgences@cliniquesml.com'],
+    lines: ['contact@cliniquesml.bj', 'urgences@cliniquesml.bj'],
   },
   {
     icon: Clock,
@@ -88,7 +88,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Map */}
+      {/* Map — Cotonou, Bénin */}
       <section className="py-14 bg-[#EBF5FD]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-['Space_Grotesk'] font-bold text-2xl text-[#0A0A0A] mb-6 text-center">
@@ -96,15 +96,15 @@ export default function Contact() {
           </h2>
           <div className="rounded-2xl overflow-hidden border-4 border-[#C8E6FA] shadow-xl">
             <iframe
-              title="Localisation de la Clinique SML à Bamako"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125346.88783783782!2d-8.0518!3d12.6392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe51d0b3d45f8f5b%3A0x5d8fe5c3e0a02028!2sBamako%2C%20Mali!5e0!3m2!1sfr!2sfr!4v1234567890"
+              title="Localisation de la Clinique SML à Agla-Akplomey, Cotonou"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63505.48!2d2.3158!3d6.3654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1024a9e9c80a67ab%3A0x6d8e12a6f3a0d5d0!2sCotonou%2C%20B%C3%A9nin!5e0!3m2!1sfr!2sbj!4v1234567890"
               width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              aria-label="Carte Google Maps — Clinique SML, Bamako"
+              aria-label="Carte Google Maps — Clinique SML, Agla-Akplomey, Cotonou"
             />
           </div>
         </div>
