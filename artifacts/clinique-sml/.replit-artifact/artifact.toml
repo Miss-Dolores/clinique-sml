@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Clinique SML"
+version = "1.0.0"
+id = "artifacts/clinique-sml"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22984
+
+[services.development]
+run = "pnpm --filter @workspace/clinique-sml run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/clinique-sml", "run", "build" ]
+publicDir = "artifacts/clinique-sml/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22984"
+BASE_PATH = "/"
