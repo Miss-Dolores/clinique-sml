@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import ServiceCard from '../components/ServiceCard';
-import { services } from '../data/services';
-import type { Service } from '../types';
+import ServiceCard from '@/components/ServiceCard';
+import { services } from '@/data/services';
+import type { Service } from '@/types';
 
 type FilterCategory = 'all' | Service['category'];
 

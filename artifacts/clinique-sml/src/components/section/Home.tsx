@@ -1,10 +1,10 @@
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 import { Star, Users, Clock, Stethoscope, ArrowRight, ShieldCheck, HeartHandshake, Microscope } from 'lucide-react';
-import HeroSection from '../components/HeroSection';
-import ServiceCard from '../components/ServiceCard';
-import { services } from '../data/services';
-import { testimonials } from '../data/testimonials';
+import HeroSection from '@/components/HeroSection';
+import ServiceCard from '@/components/ServiceCard';
+import { services } from '@/data/services';
+import { testimonials } from '@/data/testimonials';
 
 const stats = [
   { value: '20+', label: 'Médecins spécialistes', icon: Users },

@@ -4,8 +4,8 @@ import {
   Stethoscope, Baby, Heart, Scan, UserRound, Ambulance,
   FlaskConical, Waves, CalendarCheck, ArrowRight,
 } from 'lucide-react';
-import { services } from '../data/services';
-import { doctors } from '../data/doctors';
+import { services } from '@/data/services';
+import { doctors } from '@/data/doctors';
 
 const iconMap: Record<string, React.ElementType> = {
   Stethoscope, Baby, Heart, Scan, UserRound, Ambulance, FlaskConical, Waves,

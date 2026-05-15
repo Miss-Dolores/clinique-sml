@@ -4,12 +4,12 @@ import { Toaster } from '@/components/ui/sonner';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import QuickAccess from '@/components/QuickAccess';
-import Home from '@/pages/Home';
-import APropos from '@/pages/APropos';
-import Services from '@/pages/Services';
-import Specialites from '@/pages/Specialites';
-import RendezVous from '@/pages/RendezVous';
-import Contact from '@/pages/Contact';
+import Home from '@/components/section/Home';
+import APropos from '@/components/section/APropos';
+import Services from '@/components/section/Services';
+import Specialites from '@/components/section/Specialites';
+import RendezVous from '@/components/section/RendezVous';
+import Contact from '@/components/section/Contact';
 
 const queryClient = new QueryClient();
 

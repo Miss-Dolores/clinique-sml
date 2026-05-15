@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { CalendarDays, Clock, Phone, CheckCircle } from 'lucide-react';
-import AppointmentForm from '../components/AppointmentForm';
+import AppointmentForm from '@/components/AppointmentForm';
 
 const steps = [
   { icon: CalendarDays, title: 'Choisissez une spécialité', desc: 'Sélectionnez le type de consultation dont vous avez besoin.' },
