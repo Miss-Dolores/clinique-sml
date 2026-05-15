@@ -11,13 +11,18 @@ interface Props {
 export default function DoctorCard({ doctor, index = 0 }: Props) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: index * 0.08 }}
-      className="bg-white border border-[#C8E6FA] rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-[#5BABF0] transition-all duration-200 flex flex-col items-center text-center"
+      transition={{ duration: 0.45, delay: index * 0.08, ease: [0.4, 0, 0.2, 1] }}
+      whileHover={{ y: -6, boxShadow: '0 16px 40px rgba(0,87,183,0.12)' }}
+      className="bg-white border border-[#C8E6FA] rounded-2xl p-6 shadow-sm hover:border-[#5BABF0] transition-colors duration-200 flex flex-col items-center text-center"
     >
-      <div className="relative mb-4">
+      <motion.div
+        className="relative mb-4"
+        whileHover={{ scale: 1.06 }}
+        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+      >
         <img
           src={doctor.imageUrl}
           alt={`Photo de ${doctor.name}`}
@@ -29,7 +34,7 @@ export default function DoctorCard({ doctor, index = 0 }: Props) {
           }`}
           aria-label={doctor.available ? 'Disponible' : 'Indisponible'}
         />
-      </div>
+      </motion.div>
 
       <h3 className="font-['Space_Grotesk'] font-semibold text-lg text-[#0A0A0A] mb-1">
         {doctor.name}
@@ -55,7 +60,7 @@ export default function DoctorCard({ doctor, index = 0 }: Props) {
 
       <Link href="/rendez-vous">
         <motion.span
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.04, y: -2 }}
           whileTap={{ scale: 0.97 }}
           className="flex items-center gap-2 px-5 py-2.5 bg-[#0057B7] text-white text-sm font-medium rounded-xl cursor-pointer hover:bg-[#003E8A] transition-colors font-['Poppins'] shadow-md shadow-[#0057B7]/20"
           aria-label={`Prendre rendez-vous avec ${doctor.name}`}

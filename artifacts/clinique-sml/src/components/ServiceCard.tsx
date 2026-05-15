@@ -6,14 +6,7 @@ import {
 import type { Service } from '../types';
 
 const iconMap: Record<string, React.ElementType> = {
-  Stethoscope,
-  Baby,
-  Heart,
-  Scan,
-  UserRound,
-  Ambulance,
-  FlaskConical,
-  Waves,
+  Stethoscope, Baby, Heart, Scan, UserRound, Ambulance, FlaskConical, Waves,
 };
 
 interface Props {
@@ -38,15 +31,22 @@ export default function ServiceCard({ service, index = 0 }: Props) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: index * 0.08 }}
-      className="bg-white border border-[#C8E6FA] rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-[#5BABF0] transition-all duration-200 flex flex-col"
+      transition={{ duration: 0.45, delay: index * 0.08, ease: [0.4, 0, 0.2, 1] }}
+      whileHover={{ y: -6, boxShadow: '0 16px 40px rgba(0,87,183,0.12)' }}
+      className="bg-white border border-[#C8E6FA] rounded-2xl p-6 shadow-sm hover:border-[#5BABF0] transition-colors duration-200 flex flex-col cursor-default"
     >
-      <div className="w-12 h-12 rounded-xl bg-[#EBF5FD] flex items-center justify-center mb-4 shrink-0">
+      {/* Animated icon container */}
+      <motion.div
+        className="w-12 h-12 rounded-xl bg-[#EBF5FD] flex items-center justify-center mb-4 shrink-0"
+        whileHover={{ scale: 1.15, rotate: 6, backgroundColor: '#C8E6FA' }}
+        transition={{ type: 'spring', stiffness: 400, damping: 15 }}
+      >
         <Icon className="w-6 h-6 text-[#1A80D9]" aria-hidden="true" />
-      </div>
+      </motion.div>
+
       <div className="flex items-center gap-2 mb-3">
         <span className={`text-xs font-semibold px-2 py-0.5 rounded-full font-['Poppins'] ${categoryColor[service.category]}`}>
           {categoryLabel[service.category]}
@@ -67,9 +67,13 @@ export default function ServiceCard({ service, index = 0 }: Props) {
         </span>
       </div>
       <Link href="/rendez-vous">
-        <span className="mt-4 block text-center text-sm font-medium text-[#0057B7] hover:text-[#003E8A] font-['Poppins'] cursor-pointer transition-colors">
+        <motion.span
+          whileHover={{ x: 4 }}
+          transition={{ type: 'spring', stiffness: 400 }}
+          className="mt-4 flex items-center gap-1 text-sm font-medium text-[#0057B7] hover:text-[#003E8A] font-['Poppins'] cursor-pointer transition-colors"
+        >
           Prendre rendez-vous →
-        </span>
+        </motion.span>
       </Link>
     </motion.div>
   );
