@@ -1,0 +1,239 @@
+Tu es un développeur full-stack expert en Next.js 14 (App Router) et TypeScript.
+Crée un site web complet et professionnel pour une clinique médicale appelée
+"Clinique SML". Le site doit être moderne, rassurant et accessible.
+
+─────────────────────────────────────────
+STACK TECHNIQUE
+─────────────────────────────────────────
+- Framework  : Next.js 14 avec App Router
+- Langage    : TypeScript strict
+- Style      : Tailwind CSS
+- Icônes     : lucide-react
+- Formulaire : react-hook-form + zod
+- Animations : framer-motion
+
+─────────────────────────────────────────
+STRUCTURE DU PROJET
+─────────────────────────────────────────
+app/
+├── layout.tsx
+├── page.tsx
+├── apropos/page.tsx
+├── services/page.tsx
+├── medecins/page.tsx
+├── contact/page.tsx
+├── rendez-vous/page.tsx
+components/
+├── Navbar.tsx
+├── Footer.tsx
+├── HeroSection.tsx
+├── ServiceCard.tsx
+├── DoctorCard.tsx
+├── AppointmentForm.tsx
+├── ContactForm.tsx
+types/
+└── index.ts
+data/
+├── doctors.ts
+├── services.ts
+└── testimonials.ts
+
+─────────────────────────────────────────
+DESIGN ET CHARTE GRAPHIQUE
+─────────────────────────────────────────
+
+POLICES (Google Fonts) :
+  - Titres (h1, h2, h3, logo) : "Space Grotesk" — weights 500, 600, 700
+  - Corps / paragraphes / labels : "Poppins" — weights 300, 400, 500
+
+PALETTE DE COULEURS (nuances de bleu uniquement) :
+  --color-bg           : #FFFFFF   ← arrière-plan général (blanc pur)
+  --color-text         : #0A0A0A   ← texte principal (noir profond)
+  --color-text-muted   : #3D3D3D   ← texte secondaire (gris foncé)
+  --color-primary      : #0057B7   ← bleu principal (boutons, CTA, liens actifs)
+  --color-primary-dark : #003E8A   ← bleu foncé (hover boutons, titres forts)
+  --color-primary-mid  : #1A80D9   ← bleu moyen (icônes, badges, accents)
+  --color-primary-soft : #5BABF0   ← bleu doux (bordures, éléments secondaires)
+  --color-primary-pale : #C8E6FA   ← bleu très clair (fonds de cartes, tags)
+  --color-primary-ghost: #EBF5FD   ← bleu fantôme (sections alternées, inputs)
+
+RÈGLES D'APPLICATION :
+  - Fond de page          : #FFFFFF partout
+  - Sections alternées    : #EBF5FD (bleu fantôme) pour le contraste doux
+  - Titres principaux     : #0A0A0A avec font Space Grotesk
+  - Paragraphes           : #3D3D3D avec font Poppins
+  - Boutons primaires     : bg #0057B7, texte blanc, hover #003E8A
+  - Boutons secondaires   : border #0057B7, texte #0057B7, hover bg #C8E6FA
+  - Cartes                : bg #FFFFFF, border #C8E6FA, shadow douce bleue
+  - Icônes                : couleur #1A80D9
+  - Tags / badges         : bg #C8E6FA, texte #003E8A
+  - Inputs de formulaire  : bg #EBF5FD, border #5BABF0, focus border #0057B7
+  - Navbar                : bg #FFFFFF, border-bottom #C8E6FA, sticky
+  - Footer                : bg #003E8A, texte blanc
+
+LOGO NAVBAR :
+  - "Clinique" en Poppins 400, couleur #3D3D3D
+  - "SML" en Space Grotesk 700, couleur #0057B7
+  - Séparés d'un espace, sur une seule ligne
+
+─────────────────────────────────────────
+PAGES ET CONTENU
+─────────────────────────────────────────
+
+1. PAGE D'ACCUEIL (/)
+   - Hero section pleine hauteur :
+     • Titre h1 Space Grotesk : "Votre santé entre de bonnes mains"
+     • Sous-titre Poppins : "La Clinique SML vous accompagne avec expertise
+       et bienveillance à chaque étape de votre parcours de soins."
+     • Deux boutons : "Prendre rendez-vous" (primaire) + "Nos services" (secondaire)
+     • Fond blanc avec une forme décorative en dégradé de bleus à droite
+   - Section chiffres clés (fond #EBF5FD) :
+     20+ médecins | 10 000+ patients | 15 ans d'expérience | 6 spécialités
+   - Aperçu 6 services en grille (cartes blanches, bordure bleu clair)
+   - Section "Pourquoi choisir la Clinique SML" (3 colonnes avec icônes bleues)
+   - Témoignages patients (3 cartes, étoiles en #1A80D9)
+   - CTA final (fond #0057B7, texte blanc)
+
+2. PAGE À PROPOS (/apropos)
+   - Histoire de la Clinique SML (fondée en 2009)
+   - Mission et valeurs : Excellence, Humanité, Innovation
+   - Chiffres clés
+   - Photo placeholder via picsum.photos
+
+3. PAGE SERVICES (/services)
+   - Filtres par catégorie : Tous / Consultation / Spécialisé / Urgence
+   - Grille de cartes : icône bleue, titre Space Grotesk, description Poppins,
+     durée + tarif en badge bleu pâle
+
+4. PAGE MÉDECINS (/medecins)
+   - Grille de cartes médecins avec photo ronde, nom, spécialité,
+     badge disponibilité (bleu ou gris), bouton "Prendre RDV"
+
+5. PAGE RENDEZ-VOUS (/rendez-vous)
+   - Formulaire complet :
+     • Nom complet, Email, Téléphone
+     • Spécialité (select), Date, Heure préférée (matin/après-midi/soir)
+     • Motif (textarea)
+   - Validation zod + react-hook-form
+   - Confirmation stylisée (fond #EBF5FD, icône check #0057B7)
+
+6. PAGE CONTACT (/contact)
+   - Formulaire simple
+   - Adresse, téléphone, email, horaires
+   - Carte Google Maps iframe embed
+
+─────────────────────────────────────────
+TYPES TYPESCRIPT
+─────────────────────────────────────────
+interface Doctor {
+  id: string
+  name: string
+  specialty: string
+  imageUrl: string
+  available: boolean
+  description: string
+}
+
+interface Service {
+  id: string
+  title: string
+  description: string
+  icon: string
+  duration: string
+  price: string
+  category: 'general' | 'specialist' | 'emergency'
+}
+
+interface AppointmentFormData {
+  fullName: string
+  email: string
+  phone: string
+  specialty: string
+  date: string
+  timePreference: 'morning' | 'afternoon' | 'evening'
+  reason: string
+}
+
+interface Testimonial {
+  id: string
+  name: string
+  rating: number
+  comment: string
+  date: string
+}
+
+─────────────────────────────────────────
+DONNÉES MOCKÉES
+─────────────────────────────────────────
+data/doctors.ts — 6 médecins :
+  Dr. Amadou Diallo (Médecine générale)
+  Dr. Fatou Koné (Pédiatrie)
+  Dr. Moussa Traoré (Cardiologie)
+  Dr. Aïcha Bamba (Dermatologie)
+  Dr. Mariam Coulibaly (Gynécologie)
+  Dr. Seydou Ouédraogo (Urgences)
+
+data/services.ts — 6 services avec icônes lucide-react et tarifs
+data/testimonials.ts — 3 avis patients
+
+─────────────────────────────────────────
+CONFIGURATION TAILWIND
+─────────────────────────────────────────
+// tailwind.config.ts
+theme: {
+  extend: {
+    colors: {
+      blue: {
+        ghost  : '#EBF5FD',
+        pale   : '#C8E6FA',
+        soft   : '#5BABF0',
+        mid    : '#1A80D9',
+        DEFAULT: '#0057B7',
+        dark   : '#003E8A',
+      }
+    },
+    fontFamily: {
+      sans    : ['Poppins', 'sans-serif'],
+      display : ['Space Grotesk', 'sans-serif'],
+    }
+  }
+}
+
+─────────────────────────────────────────
+CONFIGURATION REPLIT
+─────────────────────────────────────────
+- .replit       : run = "npm run dev"
+- next.config.js: images optimisées (picsum.photos autorisé)
+- tsconfig.json : strict mode
+- Port          : 3000
+
+─────────────────────────────────────────
+CONTRAINTES
+─────────────────────────────────────────
+- Zéro erreur TypeScript (strict mode)
+- "use client" uniquement pour composants interactifs
+- SEO : generateMetadata sur chaque page
+    title: "Clinique SML — [Nom de la page]"
+- next/image avec picsum.photos pour les photos
+- Aria-labels sur tous les éléments interactifs
+- Tout le texte en FRANÇAIS
+- Aucune autre couleur que les nuances de bleu définies,
+  le blanc (#FFFFFF) et le noir/gris foncé pour le texte
+
+Génère l'intégralité du code fichier par fichier dans cet ordre :
+1. package.json
+2. .replit
+3. next.config.js
+4. tailwind.config.ts
+5. tsconfig.json
+6. types/index.ts
+7. data/doctors.ts, data/services.ts, data/testimonials.ts
+8. app/layout.tsx
+9. components/ (Navbar, Footer, HeroSection, ServiceCard,
+   DoctorCard, AppointmentForm, ContactForm)
+10. app/page.tsx
+11. app/apropos/page.tsx
+12. app/services/page.tsx
+13. app/medecins/page.tsx
+14. app/rendez-vous/page.tsx
+15. app/contact/page.tsx

@@ -1,0 +1,58 @@
+import type { Service } from '../types';
+
+export const services: Service[] = [
+  {
+    id: '1',
+    title: 'Consultation générale',
+    description: 'Consultations médicales complètes avec des médecins généralistes pour le diagnostic et le suivi de votre santé quotidienne.',
+    icon: 'Stethoscope',
+    duration: '30 min',
+    price: '5 000 FCFA',
+    category: 'general',
+  },
+  {
+    id: '2',
+    title: 'Pédiatrie',
+    description: 'Soins médicaux spécialisés pour les nourrissons, enfants et adolescents, incluant le suivi de croissance et les vaccinations.',
+    icon: 'Baby',
+    duration: '45 min',
+    price: '6 000 FCFA',
+    category: 'specialist',
+  },
+  {
+    id: '3',
+    title: 'Cardiologie',
+    description: 'Examens cardiovasculaires complets : ECG, échocardiographie et suivi des pathologies cardiaques par nos cardiologues experts.',
+    icon: 'Heart',
+    duration: '60 min',
+    price: '15 000 FCFA',
+    category: 'specialist',
+  },
+  {
+    id: '4',
+    title: 'Dermatologie',
+    description: 'Diagnostic et traitement des maladies de la peau, des cheveux et des ongles, incluant la dermatologie esthétique.',
+    icon: 'Scan',
+    duration: '45 min',
+    price: '10 000 FCFA',
+    category: 'specialist',
+  },
+  {
+    id: '5',
+    title: 'Gynécologie',
+    description: 'Suivi gynécologique complet, consultations prénatales, contraception et accompagnement à toutes les étapes de la vie féminine.',
+    icon: 'UserRound',
+    duration: '45 min',
+    price: '8 000 FCFA',
+    category: 'specialist',
+  },
+  {
+    id: '6',
+    title: 'Urgences médicales',
+    description: 'Prise en charge d\'urgence 24h/24 et 7j/7 pour toute situation médicale nécessitant une intervention rapide et spécialisée.',
+    icon: 'Ambulance',
+    duration: 'Selon besoin',
+    price: 'Sur évaluation',
+    category: 'emergency',
+  },
+];
