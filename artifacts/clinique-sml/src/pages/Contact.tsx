@@ -11,12 +11,14 @@ const infos = [
   {
     icon: Phone,
     title: 'Téléphone',
-    lines: ['+229 01 00 00 00', '+229 01 00 00 01'],
+    lines: ['+229 01 44 91 33 73'],
+    href: 'tel:+2290144913373',
   },
   {
     icon: Mail,
     title: 'Email',
-    lines: ['contact@cliniquesml.bj', 'urgences@cliniquesml.bj'],
+    lines: ['cliniquesainteml@gmail.com'],
+    href: 'mailto:cliniquesainteml@gmail.com',
   },
   {
     icon: Clock,
@@ -50,7 +52,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
             {/* Info cards */}
             <div className="lg:col-span-2 space-y-4">
-              {infos.map(({ icon: Icon, title, lines }, i) => (
+              {infos.map(({ icon: Icon, title, lines, href }, i) => (
                 <motion.div
                   key={title}
                   initial={{ opacity: 0, x: -20 }}
@@ -65,7 +67,13 @@ export default function Contact() {
                   <div>
                     <p className="font-['Space_Grotesk'] font-semibold text-sm text-[#0A0A0A] mb-1">{title}</p>
                     {lines.map((line) => (
-                      <p key={line} className="font-['Poppins'] text-sm text-[#3D3D3D]">{line}</p>
+                      href ? (
+                        <a key={line} href={href} className="block font-['Poppins'] text-sm text-[#1A80D9] hover:text-[#003E8A] transition-colors">
+                          {line}
+                        </a>
+                      ) : (
+                        <p key={line} className="font-['Poppins'] text-sm text-[#3D3D3D]">{line}</p>
+                      )
                     ))}
                   </div>
                 </motion.div>
@@ -104,7 +112,7 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              aria-label="Carte Google Maps — Clinique SML, Agla-Akplomey, Cotonou"
+              aria-label="Carte Google Maps — Sainte ML Clinique, Agla-Akplomey, Cotonou"
             />
           </div>
         </div>

@@ -8,12 +8,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="flex items-center mb-4">
-              <span className="font-['Poppins'] font-normal text-xl text-white/80">Clinique</span>
-              <span className="font-['Space_Grotesk'] font-bold text-xl text-white ml-1">SML</span>
+            <div className="mb-4">
+              <img src="/logo.png" alt="Sainte ML Clinique" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-white/70 text-sm font-['Poppins'] leading-relaxed">
-              Votre santé entre de bonnes mains. Nouvellement ouverte à Agla-Akplomey, Cotonou — votre clinique de quartier, au niveau d'une structure internationale.
+              Votre santé, notre priorité. Nouvellement ouverte à Agla-Akplomey, Cotonou — votre clinique de quartier, au niveau d'une structure internationale.
             </p>
           </div>
 
@@ -25,7 +24,7 @@ export default function Footer() {
                 { href: '/', label: 'Accueil' },
                 { href: '/apropos', label: 'À propos' },
                 { href: '/services', label: 'Nos services' },
-                { href: '/medecins', label: 'Nos médecins' },
+                { href: '/specialites', label: 'Spécialités' },
                 { href: '/rendez-vous', label: 'Rendez-vous' },
                 { href: '/contact', label: 'Contact' },
               ].map((link) => (
@@ -40,11 +39,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Specialties */}
           <div>
             <h3 className="font-['Space_Grotesk'] font-semibold text-white mb-4 text-base">Spécialités</h3>
             <ul className="space-y-2">
-              {['Médecine générale', 'Pédiatrie', 'Cardiologie', 'Dermatologie', 'Gynécologie', 'Urgences'].map((s) => (
+              {['Médecine générale', 'Pédiatrie', 'Cardiologie', 'Dermatologie', 'Gynécologie', 'Urgences', 'Laboratoire', 'Échographie'].map((s) => (
                 <li key={s}>
                   <span className="text-white/70 text-sm font-['Poppins']">{s}</span>
                 </li>
@@ -62,14 +61,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#5BABF0] shrink-0" />
-                <a href="tel:+22901000000" className="text-white/70 hover:text-white text-sm font-['Poppins'] transition-colors">
-                  +229 01 00 00 00
+                <a href="tel:+2290144913373" className="text-white/70 hover:text-white text-sm font-['Poppins'] transition-colors">
+                  +229 01 44 91 33 73
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#5BABF0] shrink-0" />
-                <a href="mailto:contact@cliniquesml.bj" className="text-white/70 hover:text-white text-sm font-['Poppins'] transition-colors">
-                  contact@cliniquesml.bj
+                <a href="mailto:cliniquesainteml@gmail.com" className="text-white/70 hover:text-white text-sm font-['Poppins'] transition-colors">
+                  cliniquesainteml@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
@@ -82,10 +81,10 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/50 text-sm font-['Poppins']">
-            © {new Date().getFullYear()} Clinique SML — Agla-Akplomey, Cotonou, Bénin. Tous droits réservés.
+            © {new Date().getFullYear()} Sainte ML Clinique — Agla-Akplomey, Cotonou, Bénin. Tous droits réservés.
           </p>
-          <p className="text-white/50 text-sm font-['Poppins']">
-            Excellence médicale au service de tous
+          <p className="text-white/50 text-sm font-['Poppins'] italic">
+            Votre santé, notre priorité
           </p>
         </div>
       </div>

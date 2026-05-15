@@ -13,7 +13,7 @@ const navItems = [
   { name: 'Accueil', link: '/' },
   { name: 'À propos', link: '/apropos' },
   { name: 'Services', link: '/services' },
-  { name: 'Médecins', link: '/medecins' },
+  { name: 'Spécialités', link: '/specialites' },
   { name: 'Contact', link: '/contact' },
 ];
 

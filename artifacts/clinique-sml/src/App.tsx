@@ -3,10 +3,11 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from '@/components/ui/sonner';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import QuickAccess from '@/components/QuickAccess';
 import Home from '@/pages/Home';
 import APropos from '@/pages/APropos';
 import Services from '@/pages/Services';
-import Medecins from '@/pages/Medecins';
+import Specialites from '@/pages/Specialites';
 import RendezVous from '@/pages/RendezVous';
 import Contact from '@/pages/Contact';
 
@@ -16,14 +17,13 @@ function Router() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      {/* Spacer for fixed navbar */}
       <div className="h-14" aria-hidden="true" />
       <main className="flex-1">
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/apropos" component={APropos} />
           <Route path="/services" component={Services} />
-          <Route path="/medecins" component={Medecins} />
+          <Route path="/specialites" component={Specialites} />
           <Route path="/rendez-vous" component={RendezVous} />
           <Route path="/contact" component={Contact} />
           <Route>
@@ -40,6 +40,7 @@ function Router() {
         </Switch>
       </main>
       <Footer />
+      <QuickAccess />
     </div>
   );
 }
