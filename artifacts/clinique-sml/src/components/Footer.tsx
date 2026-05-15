@@ -57,7 +57,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#5BABF0] mt-0.5 shrink-0" />
-                <span className="text-white/70 text-sm font-['Poppins']">Quartier Agla-Akplomey, Cotonou, Bénin</span>
+                <span className="text-white/70 text-sm font-['Poppins']">Carré 3262 Agla Akplomè, Cotonou, Bénin</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#5BABF0] shrink-0" />

@@ -1,6 +1,6 @@
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Clock, MapPin } from 'lucide-react';
+import { ArrowRight, Shield, Clock } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -28,12 +28,6 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
-          <div className="flex items-center gap-2 mb-5">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#C8E6FA] text-[#003E8A] text-xs font-semibold rounded-full font-['Poppins'] tracking-wide uppercase">
-              <MapPin className="w-3 h-3" />
-              Agla-Akplomey, Cotonou — Bénin
-            </span>
-          </div>
           <h1 className="font-['Space_Grotesk'] font-bold text-4xl sm:text-5xl lg:text-6xl text-[#0A0A0A] leading-tight mb-5">
             Votre santé entre{' '}
             <span className="text-[#0057B7]">de bonnes mains</span>
@@ -68,7 +62,6 @@ export default function HeroSection() {
             {[
               { icon: Shield, label: 'Soins certifiés' },
               { icon: Clock, label: 'Urgences 24h/24' },
-              { icon: MapPin, label: 'Agla-Akplomey, Bénin' },
             ].map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full bg-[#EBF5FD] flex items-center justify-center">

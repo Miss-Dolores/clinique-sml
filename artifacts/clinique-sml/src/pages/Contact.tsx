@@ -6,7 +6,7 @@ const infos = [
   {
     icon: MapPin,
     title: 'Adresse',
-    lines: ['Quartier Agla-Akplomey', 'Cotonou, Bénin'],
+    lines: ['Carré 3262 Agla Akplomè', 'Cotonou, Bénin'],
   },
   {
     icon: Phone,
