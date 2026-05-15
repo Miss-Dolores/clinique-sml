@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="mb-4">
-              <img src="/logo.png" alt="Sainte ML Clinique" className="h-12 w-auto brightness-0 invert" />
+              <img src="/logo.png" alt="Sainte ML Clinique" className="h-14 w-auto" />
             </div>
             <p className="text-white/70 text-sm font-['Poppins'] leading-relaxed">
               Votre santé, notre priorité. Nouvellement ouverte à Agla-Akplomey, Cotonou — votre clinique de quartier, au niveau d'une structure internationale.

@@ -29,8 +29,8 @@ export default function HeroSection() {
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
           <h1 className="font-['Space_Grotesk'] font-bold text-4xl sm:text-5xl lg:text-6xl text-[#0A0A0A] leading-tight mb-5">
-            Votre santé entre{' '}
-            <span className="text-[#0057B7]">de bonnes mains</span>
+            Votre santé,{' '}
+            <span className="text-[#0057B7]">notre priorité</span>
           </h1>
           <p className="font-['Poppins'] text-lg text-[#3D3D3D] leading-relaxed mb-7 max-w-xl">
             La Clinique SML vient d'ouvrir ses portes à Agla-Akplomey. Une équipe de médecins expérimentés vous accompagne avec expertise et bienveillance pour tous vos besoins de santé.
