@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import {
   motion,
   AnimatePresence,
@@ -16,6 +16,17 @@ const navItems = [
   { name: 'Médecins', link: '/medecins' },
   { name: 'Contact', link: '/contact' },
 ];
+
+const Logo = ({ height = 36 }: { height?: number }) => (
+  <Link href="/" aria-label="Sainte ML Clinique — Accueil">
+    <img
+      src="/logo.png"
+      alt="Sainte ML Clinique"
+      style={{ height }}
+      className="w-auto cursor-pointer select-none object-contain"
+    />
+  </Link>
+);
 
 /* ─────────────────────────────────────────
    Floating pill — visible when scrolled
@@ -34,19 +45,13 @@ function FloatingPill() {
         className={cn(
           'fixed top-3 inset-x-0 z-50 mx-auto',
           'flex items-center justify-between',
-          'max-w-[820px] px-4 py-2',
+          'max-w-[820px] px-4 py-1.5',
           'rounded-full bg-white/95 backdrop-blur-md',
           'border border-[#C8E6FA]',
           'shadow-[0_8px_32px_rgba(0,87,183,0.12),0_2px_8px_rgba(0,0,0,0.06)]',
         )}
       >
-        {/* Logo */}
-        <Link href="/" aria-label="Clinique SML — Accueil">
-          <span className="flex items-center cursor-pointer select-none shrink-0">
-            <span className="font-['Poppins'] text-[15px] text-[#3D3D3D]">Clinique</span>
-            <span className="font-['Space_Grotesk'] font-bold text-[15px] text-[#0057B7] ml-1">SML</span>
-          </span>
-        </Link>
+        <Logo height={32} />
 
         {/* Desktop nav links */}
         <nav className="hidden md:flex items-center gap-0.5" aria-label="Navigation principale">
@@ -145,13 +150,7 @@ function FullHeader({ visible }: { visible: boolean }) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
-          {/* Logo */}
-          <Link href="/" aria-label="Clinique SML — Accueil">
-            <span className="flex items-center cursor-pointer select-none">
-              <span className="font-['Poppins'] text-[17px] text-[#3D3D3D]">Clinique</span>
-              <span className="font-['Space_Grotesk'] font-bold text-[17px] text-[#0057B7] ml-1">SML</span>
-            </span>
-          </Link>
+          <Logo height={36} />
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-0.5" aria-label="Navigation principale">
@@ -172,15 +171,7 @@ function FullHeader({ visible }: { visible: boolean }) {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-2 shrink-0">
-            <a
-              href="tel:+22901000000"
-              className="flex items-center gap-1.5 text-[13px] text-[#1A80D9] font-medium font-['Poppins'] hover:text-[#0057B7] transition-colors"
-              aria-label="Appeler la clinique"
-            >
-              <Phone className="w-3.5 h-3.5" />
-              +229 01 00 00 00
-            </a>
+          <div className="hidden md:flex items-center shrink-0">
             <Link href="/rendez-vous">
               <span className="px-3.5 py-1.5 bg-[#0057B7] text-white text-[13px] font-medium rounded-full hover:bg-[#003E8A] transition-colors cursor-pointer font-['Poppins']">
                 Prendre RDV
@@ -226,17 +217,10 @@ function FullHeader({ visible }: { visible: boolean }) {
                 </Link>
               ))}
               <div className="border-t border-[#C8E6FA] mt-1 pt-2">
-                <a
-                  href="tel:+22901000000"
-                  className="flex items-center gap-2 px-4 py-2 text-sm text-[#1A80D9] font-['Poppins']"
-                >
-                  <Phone className="w-4 h-4" />
-                  +229 01 00 00 00
-                </a>
                 <Link href="/rendez-vous">
                   <span
                     onClick={() => setMobileOpen(false)}
-                    className="block mt-1 px-4 py-2.5 bg-[#0057B7] text-white text-sm font-medium rounded-xl text-center cursor-pointer font-['Poppins'] hover:bg-[#003E8A] transition-colors"
+                    className="block px-4 py-2.5 bg-[#0057B7] text-white text-sm font-medium rounded-xl text-center cursor-pointer font-['Poppins'] hover:bg-[#003E8A] transition-colors"
                   >
                     Prendre rendez-vous
                   </span>
@@ -263,13 +247,8 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Spacer so page content isn't hidden under the fixed bar */}
       <div className="h-14" aria-hidden="true" />
-
-      {/* Full-width header fades out as you scroll */}
       <FullHeader visible={!scrolled} />
-
-      {/* Floating pill slides in when scrolled */}
       <AnimatePresence>{scrolled && <FloatingPill />}</AnimatePresence>
     </>
   );
