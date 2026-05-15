@@ -55,4 +55,22 @@ export const services: Service[] = [
     price: 'Sur évaluation',
     category: 'emergency',
   },
+  {
+    id: '7',
+    title: 'Laboratoire d\'analyses',
+    description: 'Analyses biologiques complètes : bilan sanguin, NFS, glycémie, sérologies, bactériologie et examens urinaires, avec résultats rapides.',
+    icon: 'FlaskConical',
+    duration: '30 – 60 min',
+    price: 'À partir de 3 000 FCFA',
+    category: 'general',
+  },
+  {
+    id: '8',
+    title: 'Échographie',
+    description: 'Examens échographiques abdominaux, obstétricaux et gynécologiques réalisés par des praticiens qualifiés avec matériel de haute précision.',
+    icon: 'Waves',
+    duration: '30 min',
+    price: '10 000 FCFA',
+    category: 'specialist',
+  },
 ];

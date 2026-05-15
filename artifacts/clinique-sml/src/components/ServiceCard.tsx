@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
 import {
-  Stethoscope, Baby, Heart, Scan, UserRound, Ambulance,
+  Stethoscope, Baby, Heart, Scan, UserRound, Ambulance, FlaskConical, Waves,
 } from 'lucide-react';
 import type { Service } from '../types';
 
@@ -12,6 +12,8 @@ const iconMap: Record<string, React.ElementType> = {
   Scan,
   UserRound,
   Ambulance,
+  FlaskConical,
+  Waves,
 };
 
 interface Props {
